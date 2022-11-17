@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CourseLessonView">
+        <attr name="cv_distance_to_border" format="dimension" />
+        <attr name="cv_border_thickness" format="dimension" />
+        <attr name="cv_border_thickness_highlight" format="dimension" />
+        <!--右下角的圆圈的背景色-->
+        <attr name="cv_border_color" format="color" />
+        <attr name="cv_border_color_end" format="color" />
+        <attr name="cv_border_highlight_color" format="color" />
+        <attr name="cv_border_highlight_color_end" format="color" />
+        <!--外部圆和图片圆之间的背景色，默认是透明的-->
+        <attr name="cv_middle_color" format="color" />
+        <!--外部圆圈的颜色-->
+        <attr name="cv_circle_background_color" format="color" />
+        <attr name="cv_highlighted" format="boolean" />
+        <attr name="cv_badge_text_size" format="dimension"/>
+        <attr name="cv_badge_text_color" format="color"/>
+        <attr name="cv_show_badge" format="boolean" />
+        <attr name="cv_badge_color" format="color" />
+        <!--右下角的外部圆的颜色-->
+        <attr name="cv_badge_stroke_color" format="color" />
+        <!--右下角的外部圆的宽度-->
+        <attr name="cv_badge_stroke_width" format="dimension" />
+        <!--右下角的圆形半径-->
+        <attr name="cv_badge_radius" format="dimension" />
+        <attr name="cv_progress_start_angle" format="float"/>
+        <attr name="cv_sweep_angle" format="float"/>
+        <attr name="cv_progress_anim_time" format="dimension" />
+        <!--进度最大值-->
+        <attr name="cv_progress_max_value" format="integer" />
+        <!--当前进度值-->
+        <attr name="cv_progress_cur_value" format="integer" />
+        <attr name="cv_progress_size" format="dimension" />
+        <attr name="cv_progress_color" format="color"/>
+        <attr name="cv_progress_width" format="dimension"/>
+        <attr name="cv_progress_colors" format="color" />
+        <!-- 背景圆弧颜色 -->
+        <attr name="cv_outring_bg_color" format="color" />
+        <!-- 背景圆弧宽度 -->
+        <attr name="cv_outring_width" format="dimension" />
+        <attr name="cv_badger_alpha" format="float"/>
+        <attr name="cv_circle_alpha" format="float"/>
+        <attr name="cv_badge_resource" format="reference"/>
+        <attr name="cv_inner_resource" format="reference"/>
+        <attr name="cv_progress_text" format="string"/>
+        <attr name="cv_course_type_name" format="string"/>
+        <attr name="cv_course_name" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+</resources>
