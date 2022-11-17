@@ -6,7 +6,6 @@ import android.util.AttributeSet
 import android.view.View
 import android.view.ViewOutlineProvider
 import androidx.appcompat.widget.AppCompatImageView
-import com.mcgrady.xwidgets.CircleProgressView.OutlineProvider
 
 /**
  * Created by mcgrady on 2022/11/17.
@@ -19,7 +18,8 @@ open class CircleProgressView @JvmOverloads constructor(
 
     private val borderRect = RectF()
     private var borderRadius = 0f
-    private var borderWidth = 15f
+    private var borderWidth = DEFAULT_BORDER_WIDTH
+    private var borderColor = DEFAULT_BORDER_COLOR
 
     private val drawableRect = RectF()
     private var drawableBorderWidth = 15f
@@ -30,11 +30,24 @@ open class CircleProgressView @JvmOverloads constructor(
 
     private var disableCircularTransformation = false
 
+    private var bitmap: Bitmap? = null
+    private var bitmapCanvas: Canvas? = null
 
     init {
+        attributeSet?.let { initAttribute(it, defStyleInt) }
         super.setScaleType(ScaleType.CENTER_CROP)
-
         outlineProvider = OutlineProvider()
+    }
+
+    private fun initAttribute(attrs: AttributeSet, defStyle: Int = 0) {
+        val attributes = context.obtainStyledAttributes(attrs, R.styleable.CircleProgressView, defStyle, 0)
+
+        borderWidth = attributes.getDimensionPixelSize(
+            R.styleable.CircleProgressView_cpv_border_width,
+            DEFAULT_BORDER_WIDTH
+        )
+
+        attributes.recycle()
     }
 
     private inner class OutlineProvider : ViewOutlineProvider() {
@@ -47,5 +60,13 @@ open class CircleProgressView @JvmOverloads constructor(
                 outline.setRoundRect(bounds, bounds.width() / 2.0f)
             }
         }
+    }
+
+    companion object {
+        private const val DEFAULT_BORDER_WIDTH = 0
+        private const val DEFAULT_BORDER_COLOR = Color.BLACK
+        private const val DEFAULT_CIRCLE_BACKGROUND_COLOR = Color.TRANSPARENT
+        private const val DEFAULT_IMAGE_ALPHA = 255
+        private const val DEFAULT_BORDER_OVERLAY = false
     }
 }

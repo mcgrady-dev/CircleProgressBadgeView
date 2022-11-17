@@ -56,4 +56,12 @@
         <attr name="civ_circle_background_color" format="color" />
     </declare-styleable>
 
+
+    <declare-styleable name="CircleProgressView">
+        <attr name="cpv_border_width" format="dimension" />
+        <attr name="cpv_border_color" format="color" />
+        <attr name="cpv_border_overlay" format="boolean" />
+        <attr name="cpv_circle_background_color" format="color" />
+    </declare-styleable>
+
 </resources>
