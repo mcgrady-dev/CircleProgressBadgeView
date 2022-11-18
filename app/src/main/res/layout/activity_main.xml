@@ -1,41 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:gravity="center_horizontal"
+    android:padding="20dp">
 
-    <com.mcgrady.xwidgets.CircularProgressImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:cv_border_color="#66000000"
-        app:cv_show_badge="true"
-        app:cv_badge_radius="15dp"
-        app:cv_badge_stroke_width="3dp"
-        app:cv_border_thickness="5dp"
-        app:cv_border_thickness_highlight="5dp"
-        app:cv_circle_background_color="#f2f2f2"
-        app:cv_distance_to_border="5dp"
-        app:cv_highlighted="true"
-        app:cv_badge_text_size="8sp"
-        app:cv_progress_width="4dp"
-        app:cv_outring_width="4dp"
-        app:cv_badge_resource="@mipmap/course_ic_type_lock"
+<!--    <com.mcgrady.xwidgets.CircularProgressImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cv_border_color="#66000000"-->
+<!--        app:cv_show_badge="true"-->
+<!--        app:cv_badge_radius="15dp"-->
+<!--        app:cv_badge_stroke_width="3dp"-->
+<!--        app:cv_border_thickness="5dp"-->
+<!--        app:cv_border_thickness_highlight="5dp"-->
+<!--        app:cv_circle_background_color="#f2f2f2"-->
+<!--        app:cv_distance_to_border="5dp"-->
+<!--        app:cv_highlighted="true"-->
+<!--        app:cv_badge_text_size="8sp"-->
+<!--        app:cv_progress_width="4dp"-->
+<!--        app:cv_outring_width="4dp"-->
+<!--        app:cv_badge_resource="@mipmap/course_ic_type_lock"-->
+<!--        android:background="@color/teal_200"/>-->
+
+<!--    <com.mcgrady.xwidgets.CircleImageView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/ic_launcher_background"-->
+<!--        app:civ_border_width="2dp"-->
+<!--        app:civ_border_color="@android:color/black"-->
+<!--        android:layout_marginTop="10dp"/>-->
+
+    <com.mcgrady.xwidgets.CircleProgressBadgeView
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        app:cpbv_border_color="#33000000"
+        app:cpbv_border_width="8dp"
+        app:cpbv_circle_background_color="#f2f2f2"
+        android:layout_marginTop="10dp"
         android:background="@color/teal_200"/>
 
-    <com.mcgrady.xwidgets.CircleImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:src="@drawable/ic_launcher_background"
-        app:civ_border_width="2dp"
-        app:civ_border_color="@android:color/black" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

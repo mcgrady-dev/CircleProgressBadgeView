@@ -57,11 +57,12 @@
     </declare-styleable>
 
 
-    <declare-styleable name="CircleProgressView">
-        <attr name="cpv_border_width" format="dimension" />
-        <attr name="cpv_border_color" format="color" />
-        <attr name="cpv_border_overlay" format="boolean" />
-        <attr name="cpv_circle_background_color" format="color" />
+    <declare-styleable name="CircleProgressBadgeView">
+        <attr name="cpbv_border_width" format="dimension" />
+        <attr name="cpbv_border_color" format="color" />
+        <attr name="cpbv_border_overlay" format="boolean" />
+        <attr name="cpbv_circle_background_color" format="color" />
+        <attr name="cpbv_badge_width" format="dimension" />
     </declare-styleable>
 
 </resources>
